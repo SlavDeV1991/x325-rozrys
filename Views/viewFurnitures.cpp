@@ -1,9 +1,8 @@
 #include "viewFurnitures.h"
-
+#include "ui_viewFurnitures.h"
 
 ViewFurnitures::ViewFurnitures(QWidget *parent) :
-    ViewInterface(),
-    Ui_ViewFurnitures(parent)
+    ViewInterface(parent)
 {
     ui->setupUi(this);
 }

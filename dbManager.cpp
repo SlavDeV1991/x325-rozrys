@@ -83,7 +83,11 @@ QSqlError DBManager::create_table(const QString &tab_name)
     }
     else if(tab_name == "furnitures_elements")
     {
-
+        if(!q.exec(QLatin1String("create table furnitures_elements(id int autoincrement primary key, furniture_key varchar, el_width_dependence integer, width integer, height integer, thickness integer)")))
+        {
+            CommonLogger::Logger()->Debug(q.lastError().text());
+            return q.lastError();
+        }
     }
     else
     {

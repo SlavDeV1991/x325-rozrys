@@ -11,6 +11,7 @@
 #include <QUndoCommand>
 class UndoableSqlTableModel : public QSqlTableModel
 {
+   //TODO:: zapis bazy danych przed wyłączeniem programu
     Q_OBJECT
     class CommandSetData : public QUndoCommand
     {
